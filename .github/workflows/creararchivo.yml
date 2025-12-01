@@ -1,0 +1,22 @@
+name: Compilar java
+
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Compilar java
+        run: |
+          mkdir -p out
+          javac -d out src/*.java
+      - name: Crear JAR
+        run: cd out && jar cfe ../calculadora.jar Main */class
+      - name: Subir un archivo
+        uses: actions/upload-artifact@v5
+        with:
+          name: calculadora
+          path: calculadora.jar
