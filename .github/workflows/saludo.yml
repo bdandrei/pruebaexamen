@@ -1,0 +1,14 @@
+name: pito ivan
+
+on:
+ push:
+  branches: [ main ]
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v5
+  - name: hola pito
+    run:
+     echo "Hola pito de iban"
