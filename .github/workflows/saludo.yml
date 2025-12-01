@@ -12,3 +12,9 @@ jobs:
   - name: hola pito
     run:
      echo "Hola pito de iban"
+  - name: hola mateo
+    run:
+     echo "Hola pito de lilmat"
+  - name: hola andrei
+    run:
+     echo "Hola pito de marius"
